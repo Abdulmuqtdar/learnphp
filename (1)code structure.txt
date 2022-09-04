@@ -1,0 +1,62 @@
+1. code structure of php:-
+	
+	<?php echo"Hello World";
+	echo "Hello" , "World";
+	echo "Hello" . "World"; ?> ///. dot is concatination operator  .=
+
+2.Difference between echo & print statement:-
+	upper case ki tarha echo say multiple statements print karwa saktay hain print say nahin.
+	echo is faster then print.
+
+3. Data types in php:-  (string , integer , float , boolean , array , object , null)
+$x= "hello";
+$y  =  25 ;
+  = 30.25; 
+  = true;
+  = array("html","css", "js");
+$z  = new MyClass();
+  = null;
+
+4. Comments:-   single line // or #      multi-line /* */
+
+5. constant variable:-
+	define(name,value,case-insensitive)
+	define(num,50,true)  //true matlab variable name captial maan bi same work kary ga naa lagin to nahin kary ga by-default false hota ha.
+constant variable kay sath ham dollar sign use nahin kar saktay aur za global variable hotay hain.
+
+6. if(condition1){statement1}elseif(condition2){statement2}else{default statement}
+
+7. switch(expression){case condition1:statement; break; case condition2:statement; break; default:statement;}
+
+8. ternary operator:- $x=15; .... ($X > 10) ? $z="true" : $Z="false"; .... echo $z;    
+		logical not:- if(!($age <=18)){}  xor====>TT=f,ff=t,tf=t
+
+9. while loop:- $a=1; ... while($a <=10){echo"ali raza"; ..... $a++;}
+
+10. Do-while loop:- $a=1;  do{echo"ali"; $a++;}while($a<=10)
+
+11. For loop:-    for($a=1;$a<=10;$a++){echo "ali raza";}
+
+12. goto statement:- for($a=1; $a<=10; $a++){
+			if(a==3){goto abc;}
+			echo $a;}   abc: echo "This is new code";
+
+13. Function:-   function functionName(){statement} ....  functionName();//function calling
+14. Function with parameter:- function sum($a,$b){echo $a + $b;} ........  sum(10,20);//arguments
+15. Function with return value:- function sum($a,$b){$v ="$a + $b"; ..... return $v;} .....echo sum(10,20);  ....another-way $f= sum(10,20); echo $f;
+16. passing argument by reference ((&)):- function test(&$string){$string .="and";} .... $str = "this is"; .... testing($str); ...echo $str; ///updated output show ho gi.
+17. variable function:- function wow(){statement} .... $func="wow"; .... $func(); //function ko variable maan store kia ha aur wo variable function like behave kary ga.
+
+18. Recursive function:- function kay undar say usi function ko call karna recursive function kahlata ha.
+	function abcd(){statement   abcd();} abcd();
+function display($number){if($number <= 5){echo "$number"; .... display($number + 1);}}  .... display(1);
+//jub tak condition pori nahin ho gi function khud ko call karta rahy ga.
+
+
+
+
+
+
+
+
+
