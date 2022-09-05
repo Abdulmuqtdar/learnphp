@@ -1,0 +1,146 @@
+1.factorial number:- 5 = 5*4*3*2*1 =120
+
+function factorial($n){
+if($n == 0){
+return 1;
+}else{
+return($n * factorial($n-1));}}
+echo factorial(5);
+
+array likhnay ka dosra tarika array ni likhna aur [] use karni ha $a =[];
+2.Array:-  $a = array(10,20,30);  =array("red","yellow","green");	echo $a[0];
+  special function for array:-  print_r($a); //use for testing purpose.
+print array using for loop
+$a = ["red",12,"yeoolw", 12.50, "green"];
+for($i=0;$i<=4;$i++){echo $a[$i]. "<br>";}
+
+3.associative array:- $a = array("Abdul"=>10, "hum"=>20, 3 =>30); //abdul,hum,20 keys ha aur 10,20,30 values. echo $a["Abdul"]; //index ki jaga key pass kar dain gay.
+	var_dump($a);//array ki value ki datatype bi btay ga.
+
+4. foreach loop:- $a = array(10,20,30); foreach($a as $v){echo $v ."<br>";}
+for associative array:- $a = array("Abdul"=>10, "hum"=>20, 3 =>30);	foreach($a as $key => $value){echo $key . "=" . $value ."<br>";}
+
+5. Multidimensional array or Nested array:-
+	$a = array(
+array(11,"ali","bsse",13),array(61,"ali","bsse",13),array(81,"ali","bsse",13),array(16,"ali","bsse",13));
+
+6. Multidimensional associative array:-  new method use [] this ethir () also not use array word
+$marks = array(
+"ali"=>array("physics"=>85, "chemistry"=>65,"biology"=>78),"raza"=>array("physics"=>75, "chemistry"=>85,"biology"=>88),
+"tariq"=>array("physics"=>95, "chemistry"=>75,"biology"=>68),
+);
+
+7. foreach loop with list:-
+	$a = [[61,"ali","bsse",13],[61,"ali","bsse",13]];
+echo "<table border='1px' cellpadding='5px' cellspacing='0px'>";
+<tr><th>ID</th><th>NAME</th><th>CLASS</th><th>ROLLNO</th></tr>
+foreach($a as list($id,$name,$class,#rollno)){
+echo "<tr><td>$id</td>,<td>$name</td>,<td>$class</td>,<td>$rollno </td></tr>";}  echo "</table>";
+
+
+8. array count / sizeof function:-
+echo count(arrayname); 	/// echo sizeof(arrayname);
+
+multidimentional array ki value check karnay kay liay:-
+$food= array('fruits'=>array('orange','apple','bnana'),
+		'vagitable'=>array('carrot','pea','collard'));
+
+echo count($food['fruit'],1);   ///1 matlab mood za array ki internal array ki bi value count kary ga.aur is maan ek internal array fruit ki value check kar kay btay ga.
+
+9. array search function:-  in_array()   ///    array_search()
+in_array() function 0/1 index maan value print kary ga false/true. and array_search() index za key ko search kar kay show kary ga. single array kay case maan index
+aur associative array kay case maan key search kary ga.
+
+10.array_replace()  /// array_replace_recursive() 
+do array hain $a and $b ham b ki value's ko a maan store karwana cahtay hain. za function existing array main value change
+nahin karain gay new array create kar kay us main store karwain gay.
+array_replace()  ///index / associative array kay sath use kartay hain.
+array_replace_recursive()   ////multidemensional associative array kay sath use kartay hain.
+
+$fruits = ['orange','apple','bnana'];
+$vagitable = ['carrot','pea'];
+$newArray = array_replace($fruits,$vagitable);
+
+print_r($newArray);
+
+
+$array1 = array("a"=>array("red"),"b"=>array("green","pink"));
+$array2 = array("a"=>array("red"),"b"=>array("green","pink"));
+$newArray = array_replace_recursive($array1,$array2);
+echo "<pre>";
+print_r($newArray);
+echo "</pre>";
+
+11. array_pop()  /// array_push()
+array_pop()  last say array ki ek value ko delete kar day ga. push last maan value add kary ga.
+array_pop($fruit);
+ array_push($fruit,"apple"); 
+
+12.array_shift()  /// array_unshift()
+array_shift()  first say array ki ek value ko delete kar day ga. unshift first maan value add kary ga.
+
+13. array_merge()  /// array_merge_recursive()  ///array_combine()
+array_merge()	inndex or associative array kay sath use kartay hain array's ko combine karnay kay liay.
+do arrays maan do common key hon gi to baad wali pahlay wali ko replace kar day ki
+
+array_merge_recursive()	Multidimensional associative array kay sath use kartay hain.
+dono arrays maan do keys common hon gi to un ki alag say ek associative array bna day ga.
+
+array_combine() Index array kay sath use kartay hain.
+za ek array ko key bna day ga aur dosray ko value aur tab hi combine kary ka jab dono same type ki arrays hon gi to 
+matlab ek bi same type like string ki aur dosri intger type ki
+
+14. array_slice() function:- existing array say values utha kar new array bna day ga.
+function syntax:- array_slice(array,start index,length of next array values)
+$color = ["red","green","yellow","pink"];
+$newArray = array_slice($color,1,3);	/// $newArray = array_slice($color,1,true); ///true is a reserve parameter za pahlay wala index hi show kary ka array value ki
+print_r($newArray);
+
+15. array_splice() function:-  ek array ha us ki kush values ko array two ki value say change karnay kay liay ha 
+syntax:- array_splice(array,start,length,array-2)
+$color = ["red","green","yellow","pink"];
+$change =["greek","perl"];
+array_splice($color,1,2,$change);
+print_r($color);
+
+16. Array key function's:-
+	{ array_keys(),array_key_first(),array_key_last(),array_key_exists(),key_exists() }
+array_keys() /// tmam array ki keys new array create kar kay print kary ga.
+array_key_first() /// first array ko print kary ga.
+array_key_last()  /// last array ko print kary ga.
+array_key_exists()   /// key_exists() same hain key ko search kar kay btay ga exist karti ha za nahin.
+
+17. Array intersect function's:-
+	{array_intersect,array_intersect_key,array_intersect_assoc,array_intersect_uassoc,array_intersect_Ukey,
+	array_uintersect,array_uintersect_assoc,array_uintersect_uassoc}
+array_intersect() ///do array's maan common value find kary ga.
+array_intersect_key()  ///do array's maan common keys find kary ga.
+array_intersect_assoc()  /// common key;s common value waly array element ko find kar kay new array create kary ga.
+array_intersect_uassoc() /// u matlab user defined common key's aur values find kary ga lakin hmary btay method mtabik.
+syntax:- array_intersect_uassoc($a1,$b2,"compare");   /// function compare($a1,$b2){if($a === $b){return 0;}return ($a > $b)? 1 : -1;}
+array_intersect_Ukey()  ///
+array_uintersect()	///
+array_uintersect_assoc() ///array_intersect_uassoc() dono same work krain gay.
+array_uintersect_uassoc() /// array_intersect_uassoc($a1,$b2,"compare","compare1"); ///associative array kay liay bna ha keys aur values dono ko compare kary ga function1 for keys function2 for values
+
+18. Array difference functions:-
+	{array_diff(),array_diff_key(),array_diff_assoc,array_diff_uassoc,array_diff_ukey,array_udiff_assoc,array_udiff_uassoc,array_udiff }
+ array_diff()  ///for different value's
+ array_diff_key()  ////for comparing different key's
+ array_diff_assoc() ///for comparing both
+ array_diff_uassoc() ///
+ array_diff_ukey()
+ array_udiff_assoc()
+ array_udiff_uassoc()
+ array_udiff()
+
+
+
+
+
+ 
+
+
+
+
+
